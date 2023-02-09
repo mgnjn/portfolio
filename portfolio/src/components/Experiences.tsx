@@ -37,7 +37,7 @@ const experiences: ExperienceProps[] = [
   },
 ];
 
-function Experiences() {
+const Experiences = () => {
   return (
     <>
       <StyledExperiencesContainer
@@ -63,6 +63,6 @@ function Experiences() {
       </StyledExperiencesContainer>
     </>
   );
-}
+};
 
-export default Experiences;
+export { Experiences };

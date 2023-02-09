@@ -3,7 +3,7 @@ import { Box, Container, styled, Typography } from "@mui/material";
 
 const StyledAboutContainer = styled(Container)``;
 
-function About() {
+const About = () => {
   return (
     <>
       <StyledAboutContainer
@@ -24,6 +24,5 @@ function About() {
       </StyledAboutContainer>
     </>
   );
-}
-
-export default About;
+};
+export { About };

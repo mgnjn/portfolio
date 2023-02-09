@@ -2,7 +2,7 @@ import { Card, ListItem, List } from "@mui/material";
 import React from "react";
 import { ExperienceProps } from "./Experiences";
 
-function Experience({ company, role, skills }: ExperienceProps) {
+const Experience = ({ company, role, skills }: ExperienceProps) => {
   return (
     <>
       <Card>
@@ -20,6 +20,6 @@ function Experience({ company, role, skills }: ExperienceProps) {
       </Card>
     </>
   );
-}
+};
 
 export default Experience;

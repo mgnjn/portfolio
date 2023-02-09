@@ -4,7 +4,8 @@ import React from "react";
 const StyledProjectsContainer = styled(Container)`
   backgroundcolor: primary.dark;
 `;
-function Projects() {
+
+const Projects = () => {
   return (
     <>
       <StyledProjectsContainer
@@ -15,6 +16,6 @@ function Projects() {
       </StyledProjectsContainer>
     </>
   );
-}
+};
 
-export default Projects;
+export { Projects };

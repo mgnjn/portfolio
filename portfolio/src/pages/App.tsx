@@ -6,9 +6,10 @@ import "@fontsource/roboto/700.css";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-import About from "../components/About";
-import Experiences from "../components/Experiences";
-import Projects from "../components/Projects";
+// import { About } from "@components/About";
+// import { About } from "@components/";
+// import { About } from "@components/";
+import { About, Experiences, Projects } from "@/components";
 
 export default function App() {
   return (
