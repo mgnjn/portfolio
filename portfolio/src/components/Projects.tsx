@@ -1,6 +1,8 @@
 import { Container, styled } from "@mui/material";
 import React from "react";
 
+import Project from "./Project";
+
 const StyledProjectsContainer = styled(Container)`
   backgroundcolor: primary.dark;
 `;
@@ -12,7 +14,9 @@ const Projects = () => {
         sx={{ backgroundColor: "secondary.dark" }}
         maxWidth={false}
       >
-        Hello
+        <Project name="proj1" link="github.com" />
+        <Project name="proj2" link="github.com" />
+        <Project name="proj3" link="github.com" />
       </StyledProjectsContainer>
     </>
   );

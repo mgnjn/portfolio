@@ -1,17 +1,20 @@
 import {
-  Box,
   Container,
   List,
   ListItem,
   ListItemText,
   styled,
+  Card,
 } from "@mui/material";
 import React from "react";
-import Experience from "./Experience";
 
-const StyledExperiencesContainer = styled(Container)`
-  backgroundolor: #c5e3c6;
-`;
+const StyledExperiencesContainer = styled(Container)({
+  backgroundColor: "#c5e3c6",
+});
+
+const StyledExperienceContainer = styled(Card)({
+  display: "flex",
+});
 
 export type ExperienceProps = {
   company: string;
@@ -37,26 +40,43 @@ const experiences: ExperienceProps[] = [
   },
 ];
 
+const Experience = ({ company, role, skills }: ExperienceProps) => {
+  return (
+    <>
+      <Card>
+        <List>
+          <ListItem> {company}</ListItem>
+          <ListItem> {role}</ListItem>
+          <ListItem>
+            <List>
+              {skills.map((skill, id) => {
+                return <ListItem key={id}>{skill}</ListItem>;
+              })}
+            </List>
+          </ListItem>
+        </List>
+      </Card>
+    </>
+  );
+};
+
 const Experiences = () => {
   return (
     <>
-      <StyledExperiencesContainer
-        maxWidth={false}
-        sx={{
-          backgroundColor: "primary.dark",
-        }}
-      >
+      <StyledExperiencesContainer>
         <List>
-          {experiences.map((e) => {
+          {experiences.map((e, id) => {
             return (
-              <ListItem>
-                <ListItemText> {e.company}</ListItemText>
-                <Experience
-                  company={e.company}
-                  role={e.role}
-                  skills={e.skills}
-                />
-              </ListItem>
+              <StyledExperienceContainer key={id}>
+                <ListItem>
+                  <ListItemText> {e.company}</ListItemText>
+                  <Experience
+                    company={e.company}
+                    role={e.role}
+                    skills={e.skills}
+                  />
+                </ListItem>
+              </StyledExperienceContainer>
             );
           })}
         </List>

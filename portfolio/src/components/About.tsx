@@ -1,18 +1,14 @@
 import React from "react";
-import { Box, Container, styled, Typography } from "@mui/material";
+import { Container, styled, Typography } from "@mui/material";
 
-const StyledAboutContainer = styled(Container)``;
+const StyledAboutContainer = styled(Container)({
+  backgroundColor: "teal",
+});
 
 const About = () => {
   return (
     <>
-      <StyledAboutContainer
-        maxWidth={false}
-        sx={{
-          backgroundColor: "secondary.dark",
-          width: 1,
-        }}
-      >
+      <StyledAboutContainer maxWidth={false}>
         <Typography variant="h1"> name.</Typography>
         <Typography variant="body1">
           LoremLibero sit eveniet ipsum doloribus soluta mollitia ratione.
