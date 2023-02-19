@@ -4,32 +4,28 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 
-import { About, Experiences, Projects } from "@/components";
+import { About, Experiences, Learning, Projects } from "@/components";
+import { Container, styled } from "@mui/material";
+import { withTheme } from "@emotion/react";
+
+const ContentContainer = styled(withTheme(Container))((props) => ({
+  width: "80%",
+}));
 
 export default function App() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <About />
-      <Experiences />
-      <Projects />
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      <ContentContainer maxWidth={false}>
+        <About />
+        <Experiences />
+        <Projects />
+        <Learning />
+      </ContentContainer>
+    </>
   );
 }
